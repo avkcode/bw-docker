@@ -1,15 +1,3 @@
-- bitwarden-ssl.conf contains Nginx configuration for SSL settings and HTTPS redirection to secure web traffic.
-- bw_settings.py is a Python script used to generate or manage environment variables for the Bitwarden setup dynamically.
-- docker-compose.yml defines services like Bitwarden and PostgreSQL in Docker containers including their networks ports and volumes.
-- entrypoint.sh is the startup script for configuring the Bitwarden container such as setting up users certificates and application settings.
-- ssl is a directory storing SSL certificate files including private keys and public certificates for securing connections.
-- bw_certs.sh generates self-signed SSL certificates for development or testing purposes when proper certificates are unavailable.
-- data holds persistent data such as PostgreSQL database files ensuring data survives container restarts.
-- Dockerfile defines the blueprint for building the custom Docker image tailored for running the Bitwarden application.
-- postgres_password.txt stores the PostgreSQL password securely used by Docker secrets to avoid hardcoding sensitive credentials.
-- settings.env contains environment variables like database connection strings domain names and service configurations required for Bitwarden operation.
-
-
 # Setup
 
 ## DB password
@@ -68,3 +56,16 @@ Monitor Logs :
 ```
 docker-compose logs -f
 ```
+
+### Files
+
+- bitwarden-ssl.conf contains Nginx configuration for SSL settings and HTTPS redirection to secure web traffic.
+- bw_settings.py is a Python script used to generate or manage environment variables for the Bitwarden setup dynamically.
+- docker-compose.yml defines services like Bitwarden and PostgreSQL in Docker containers including their networks ports and volumes.
+- entrypoint.sh is the startup script for configuring the Bitwarden container such as setting up users certificates and application settings.
+- ssl is a directory storing SSL certificate files including private keys and public certificates for securing connections.
+- bw_certs.sh generates self-signed SSL certificates for development or testing purposes when proper certificates are unavailable.
+- data holds persistent data such as PostgreSQL database files ensuring data survives container restarts.
+- Dockerfile defines the blueprint for building the custom Docker image tailored for running the Bitwarden application.
+- postgres_password.txt stores the PostgreSQL password securely used by Docker secrets to avoid hardcoding sensitive credentials.
+- settings.env contains environment variables like database connection strings domain names and service configurations required for Bitwarden operation.
