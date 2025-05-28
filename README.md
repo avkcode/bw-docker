@@ -1,12 +1,12 @@
 # Setup
 
-## DB password
+## 1. DB password
 Writes the PostgreSQL database password into a file named postgres_password.txt. This file will be used as a Docker secret to securely pass the password to the database container.
 ```
 echo "Super1strong2password" > postgres_password.txt
 ```
 
-## Generate certs
+## 2. Generate certs
 bw_certs.sh generates self-signed SSL certificates for development or testing purposes:
 ```
 ./bw_certs.sh localhost
@@ -17,7 +17,7 @@ ls ssl/
 cert.pem  dhparam.pem  key.pem
 ```
 
-## Adjust .settings.env
+## 3. Adjust .settings.env
 
 Replace placeholders like BW_DOMAIN, BW_DB_PASSWORD, BW_INSTALLATION_ID, and BW_INSTALLATION_KEY with actual values.
 
@@ -51,7 +51,7 @@ globalSettings__installation__key=<>
 After adjustments:
 `mv .settings.env settings.env`
 
-## Start docker-compose
+## 4. Start docker-compose
 
 Start the services in detached mode:
 ```
