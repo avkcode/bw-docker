@@ -1,10 +1,16 @@
 # Setup
 
 ## DB password
+Writes the PostgreSQL database password into a file named postgres_password.txt. This file will be used as a Docker secret to securely pass the password to the database container.
+```
 echo "Super1strong2password" > postgres_password.txt
+```
 
 ## Generate certs
+bw_certs.sh generates self-signed SSL certificates for development or testing purposes:
+```
 ./bw_certs.sh localhost
+```
 
 ```
 ls ssl/
