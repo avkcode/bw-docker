@@ -6,6 +6,11 @@ Writes the PostgreSQL database password into a file named postgres_password.txt.
 echo "Super1strong2password" > postgres_password.txt
 ```
 
+`data` holds persistent data such as PostgreSQL database files ensuring data survives container restarts:
+```
+mkdir data
+```
+
 ## 2. Generate certs
 bw_certs.sh generates self-signed SSL certificates for development or testing purposes:
 ```
