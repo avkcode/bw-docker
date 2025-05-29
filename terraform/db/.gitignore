@@ -1,0 +1,61 @@
+# Terraform files
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate.*
+terraform.tfvars
+*.tfplan
+.terraformrc
+terraform.rc
+
+# Credentials and sensitive files
+*.pem
+*.key
+*_rsa
+*_ed25519
+*.pub
+*.ppk
+*.crt
+*.cer
+db_credentials.txt
+secrets.tfvars
+*secret*
+*credential*
+*password*
+*.env
+
+# Local .terraform directories
+**/.terraform/*
+
+# AWS specific
+.aws/
+aws.json
+aws.yml
+.aws-credentials
+
+# Crash log files
+crash.log
+crash.*.log
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+*.iml
+*.iws
+*.ipr
+
